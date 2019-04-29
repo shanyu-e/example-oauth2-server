@@ -1,3 +1,5 @@
+import os
+
 from website.app import create_app
 
 
@@ -13,6 +15,9 @@ app = create_app({
 def initdb():
     from website.models import db
     db.create_all()
+
+
+os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
 
 
 if __name__ == '__main__':

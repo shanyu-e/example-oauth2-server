@@ -29,4 +29,4 @@ def create_app(config=None):
 def setup_app(app):
     db.init_app(app)
     config_oauth(app)
-    app.register_blueprint(bp, url_prefix='')
+    app.register_blueprint(bp, url_prefix='oauth')
